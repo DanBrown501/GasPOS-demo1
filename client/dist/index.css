@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+    margin: 0; 
+    padding: 0;
+    font-family: 'arial';
+}
+#app {
+    display: flex;
+}
+main {
+    width: 66.66%;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+header h1 {
+    color:rgb(46, 46, 46);
+    font-weight: 800;
+}
+.sidebar {
+    width: 33.33%;
+    background-color: #8791ed;
+    position: relative;
+    overflow: hidden;
+}
+.circle-light {
+    background-color: #a3abec;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+.circle-dark {
+    background-color: #747cc0;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(20%, -60%);
+}
+  
+.card {
+    background: white;
+    padding: 1em;
+    border-radius: .75rem;
+    z-index:3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transform: translate(-50%,-50%);
+}
+.card h1 {
+    color: rgb(46, 46, 46);
+    font-weight: 800;
+}
+.card p {
+    font-size: 1.1em;
+}
+header {
+    width: 100%;
+    text-align: left;
+}
+.form {
+    max-width:500px;
+    width: 100%;
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    transition: .3s ease-in-out;
+    width: 100%;
+}
+.slide.active {
+left: 0;
+position: relative;
+transition: .3s ease-in-out;
+}
+.slide.complete {
+    left: -100%;
+    transition: .3s ease-in-out;
+}
+.slide h1 {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: rgb(46, 46, 46);
+    font-weight: 800;
+}
+.subtitle {
+   margin:0; padding: 0;
+    font-size: 1.1em;
+    display: block;
+    margin-right: auto;
+}
+.marker {
+    display: block;
+    width: 35px;
+    background-color: #210a36;
+    opacity: .2;
+    height: 8px;
+    margin-right: 10px;
+}
+.align-center {
+    align-items: center;
+    padding: .25em 0 1.25em 0;
+}
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    background-color: #210a36;
+    border: none;
+    color: white;
+    padding: .75rem 1rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    cursor: pointer;
+    min-width: 125px;
+}
+button.right {
+    margin-left: auto;
+}
+button.submit {
+    background-color: #8791ed;
+}
+.input-control {
+    font-size: 1.1rem;
+    padding: .5rem .75rem;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: .5rem;
+    transition: .2s ease-in-out;
+    color: #210a36;
+    width: 100%;
+
+}
+.input-control:focus {
+    outline: none;
+    border: 1px solid #210a36;
+    transition: .2s ease-in;
+}
+.input-wrapper {
+    padding-bottom: 1rem;
+}
+.hide {
+    display: none;
+}
+.error {
+    color: red;
+    margin: 0;
+    padding: 0;
+    padding-top: .2rem;
+}
+.pl {
+    padding-left: 5px;
+}
+.pr {
+    padding-right: 5px;
+}
+
+.blob-loader {
+    position: relative;
+    width: 200px; height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 30px;
+    color: white;
+    margin: 0 auto;
+  }
+  .blob-loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #747cc0 content-box;
+    box-sizing: border-box;
+    border-top: 15px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    from {
+    transform: rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  @media screen and (max-width:1510px) {
+      .card {
+          max-width: 400px;
+      }
+  }
+  @media screen and (max-width:1160px) {
+    main {
+        width: 100%;
+    }
+    .sidebar{
+        display: none;
+    }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "express-react-template",
+  "version": "1.0.0",
+  "description": "Alloy onboarding",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run build --prefix client\" \"nodemon index.js\"",
+    "start": "node index.js",
+    "prod": "npm run prod --prefix client",
+    "build": "npm i --prefix client && npm run prod --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Austin-Jones/new-bank-demo"
+  },
+  "keywords": [
+    "express",
+    "react",
+    "template",
+    "babel",
+    "webpack",
+    "styled-components"
+  ],
+  "author": "codingjlu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codingjlu/express-react-template/issues"
+  },
+  "engines": {
+    "node": "17.3.0"
+  },
+  "homepage": "https://github.com/codingjlu/express-react-template#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^14.3.0",
+    "express": "^4.17.2",
+    "kleur": "^4.1.4",
+    "node-fetch": "2.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "css-loader": "^6.5.1",
+    "nodemon": "^2.0.15"
+  }
+}
